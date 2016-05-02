@@ -39,6 +39,21 @@ class Parser:
         
     def assign(self, array):
         self.array = array
+
+    def assign_pos(self, array):
+        new_array = []
+        pos = 1
+        for field in array:
+            new = []
+            new.append(pos)
+            new.append(field[0])
+            if len(field) > 1:
+                new.append(field[1])
+
+            new_array.append(new)
+            pos = pos + field[0]
+
+        self.array = new_array
         
     def p_context(self):
         for field in self.array:
