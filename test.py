@@ -32,3 +32,14 @@ p.assign([
 p.load("1235test0123456789test012")
 
 p.p_context()
+
+p.assign_pos([
+    [3],
+    [1],
+    [20, "named"],
+    [1],
+    ])
+
+p.load("1235test0123456789test012")
+
+p.p_context()
